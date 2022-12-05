@@ -1,0 +1,42 @@
+<div class="book container-fluid ok">
+    <div class="row">
+
+
+        <div class="col-12 details">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h1 class="mt-5">Your Profile</h1>
+                <h5>Our User is our Soul, without them we can't exist</h5>
+
+            </div>
+            <div class="row justify-content-center mt-4 bger">
+                <div class="col-md-6 middle">
+                    <div class=" d-flex justify-content-center">
+                        <img  src="assets/profile.png" class="img-fluid" alt="">
+                    </div>
+                    <div> <p style="text-align: center;">UserId : {{id}}<p> </div>
+
+                    <div style="display: flex;flex-wrap: wrap; justify-content: space-between;">
+                        <div><p>Name : {{name}}</p> </div>
+                        <div><p>contact : {{contact}}</p> </div>
+                    </div>
+                    
+                    <div style="display: flex;flex-wrap: wrap; justify-content: space-between;">
+                        <div> <p>Email : {{email}}</p> </div>
+                        <div> <p>Password : **********</p> </div>
+                    </div>
+                    
+                    
+                    
+                    <div> <p> Address : {{address}}</p> </div>
+
+                    <div (click)="(deleteUser(id))" style="width: 100%; display: flex; justify-content: center;"><a href="">
+                        <button type="button" class="btn">Delete Account</button> 
+                    </a></div>
+                
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

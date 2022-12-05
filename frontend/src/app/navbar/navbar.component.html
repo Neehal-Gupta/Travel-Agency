@@ -1,0 +1,51 @@
+
+  <nav class="navbar navbar-expand-lg navbar-dark full">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink=""><img  class="img-fluid " width="90px" src="assets/logo.jpg"  style="border-radius:50%; border: 3px solid white;" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item ms-2">
+            <a class="nav-link active" aria-current="page" routerLink="" >Home</a>
+          </li>
+  
+          <li class="nav-item ms-2">
+            <a class="nav-link active" aria-current="page" routerLink="mybookings">MyBookings</a>
+          </li>
+          
+          <li *ngIf="this.transport.loggedIn" class="nav-item ms-2">
+            <a class="nav-link active" aria-current="page" routerLink="login">Login</a>
+          </li>
+
+          <li *ngIf="!this.transport.loggedIn" class="nav-item ms-2">
+            <a (click)="logout()" class="nav-link active" aria-current="page" href="">LogOut</a>
+          </li>
+ 
+          <li class="nav-item ms-2">
+            <a class="nav-link active mb-2" aria-current="page" routerLink="profile">Profile</a>
+          </li>
+        </ul>
+        <div style=" border-radius: 5%;">
+         
+          <button id="targetkr" style="font-size:1.2rem;" routerLink="bookcab" class="btn " type="submit">
+
+            <div class="d-flex">
+              <Span >Book Cab</Span>
+           
+            </div>
+
+            
+          </button>
+
+          <a class="navbar-brand" routerLink="profile"><img class="ms-3 me-2 img-fluid"  style="border-radius:50%; border: 3px solid goldenrod; width: 60px; height: 60px; background-color: grey;" alt="" src={{this.transport.url}}></a>
+          
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+

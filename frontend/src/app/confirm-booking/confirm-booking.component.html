@@ -1,0 +1,40 @@
+<div class="book container-fluid ok">
+    <div class="row">
+
+
+        <div class="col-12 details">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h1 style="margin-top: 70px">Confirm Your Booking</h1>
+                <h5>This World is like a book, one who didn't travel only read its first page</h5>
+
+            </div>
+            <div class="row justify-content-center mt-4 bger">
+                <div class="col-sm-6  middle">
+                    <div> <p style="text-align: center;">BookingId : ###<p> </div>
+
+                    <div style="display: flex;flex-wrap: wrap; justify-content: space-between;">
+                        <div><p>From : {{start}}</p> </div>
+                        <div><p>To : {{end}}</p> </div>
+                    </div>
+                    
+                    <div style="display: flex;flex-wrap: wrap; justify-content: space-between;">
+                        <div> <p>Departure Date : {{depdate}}</p> </div>
+                        <div> <p>Arrival Date : {{arrdate}}</p> </div>
+                    </div>
+                    
+                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                        <div> <p>Car Type : {{carType}} </p>  </div>
+                        <div> <p>Distance: {{dist}}km</p> </div>
+                    </div>
+                    
+                    <div> <p> Cost : {{price}}/-</p> </div>
+
+                    <div (click)="confirm()" style="width: 100%; display: flex; justify-content: center;"><button type="button" class="btn">Confirm</button></div>
+                
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

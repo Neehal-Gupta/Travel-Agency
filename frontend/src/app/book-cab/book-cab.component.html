@@ -1,0 +1,70 @@
+<div class="book container-fluid" [ngClass]="animator" >
+    <div class="row">
+
+
+        <div class="col-12 details" >
+            <div style="text-align: center;">
+                <h1 style="margin-top: 70px">Book Your Trip</h1>
+                <h5>A journey of thousand miles starts with a single step</h5>
+
+            </div>
+            <div class="row justify-content-center mt-4 help">
+                <div class="col-md-6 col-sm-8 middle">
+                    <form style="font-family: Verdana, Geneva, Tahoma, sans-serif !important;" ngNativeValidate class="former" #bookF="ngForm" (submit)="book(bookF.value)">
+
+
+
+                        <input required ngModel name="start" type="text" placeholder="From">
+                        <input required ngModel name="end" type="text" placeholder="To">
+
+                        <div >
+
+                            
+                            <input required ngModel name="depdate" min={{minDate}} type="date">
+                            <label for="">Departure Date</label>
+                        </div>
+
+                        <div >
+
+                            
+                            <input id="help" required ngModel name="arrdate" max={{maxDate}} type="date">
+                            <label for="">Arrival Date</label>
+                        </div>
+
+
+
+                        <div>
+                            
+                            <select [(ngModel)]="defaultCar" required type="text" ngModel name="carType" id="cars">
+                                <option value="SUV">SUV</option>
+                                <option value="Sedan">Sedan</option>
+                                <option value="Bus">Bus</option>
+                                <option value="AutoRikshaw">AutoRikshaw</option>
+                            </select>
+                            <label for="">Car Type </label>
+                        </div>
+
+
+
+                        <button type="submit" class="btn buton bg-primary">Book</button>
+                        <div *ngIf="DateValid" class="btn buton bg-Danger">Please Enter Valid Date </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- <h3>
+    <p>delete by bid</p>
+    <input [(ngModel)]="bid" type="text">
+    <button (click)="delete()">{{bid}}</button>
+
+    <br>
+    <br>
+    <p>get by userid</p>
+    <input [(ngModel)]="uid" type="text">
+    <button (click)="getbyuid()">{{uid}}</button>
+
+  </h3> -->

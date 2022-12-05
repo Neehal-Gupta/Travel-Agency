@@ -1,0 +1,72 @@
+<!-- Section: Design Block -->
+
+
+<section class="text-center text-lg-start bg-info">
+    <style>
+      .cascading-right {
+        margin-right: -50px;
+      }
+  
+      @media (max-width: 991.98px) {
+        .cascading-right {
+          margin-right: 0;
+        }
+      }
+    </style>
+  
+    <!-- Jumbotron -->
+    <div class="container py-4">
+      <div class="row g-0 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card cascading-right" style="
+              background: hsla(0, 0%, 100%, 0.55);
+              backdrop-filter: blur(30px);
+              ">
+            <div class="card-body p-5 shadow-5 text-center">
+              <h2 class="fw-bold mb-5">Log in now</h2>
+              <form ngNativeValidate #loginform="ngForm" (submit)="login(loginform.value)">
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                
+  
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input required ngModel name="uid" type="email" id="form3Example3" class="form-control" />
+                  <label *ngIf="!notFound" class="form-label" for="form3Example3">Email Address</label>
+                  <label style="color: #b60c99; font-weight: 600; font-size: 115%;" *ngIf="notFound" class="form-label" for="form3Example4">User doesn't exist...</label>
+                
+                </div>
+  
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input required ngModel name="password" type="password" id="form3Example4" class="form-control" />
+                  <label *ngIf="!incorrect" class="form-label" for="form3Example4">Password</label>
+                  <label style="color: #b60c99; font-weight: 600; font-size: 115%;" *ngIf="incorrect" class="form-label" for="form3Example4">Password is Incorrect...</label>
+                </div>
+  
+                <!-- Checkbox -->
+                
+  
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">
+                  Login
+                </button>
+  
+                <!-- Register buttons -->
+                
+              </form>
+              <button style="width: 100%; border-radius: 10px; border: 1px solid white;" (click)="signup()" type="submit" class="btn btn-primary btn-block mb-4">
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" class="w-100 rounded-4 shadow-4"
+            alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->
